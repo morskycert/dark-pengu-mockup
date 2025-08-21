@@ -2,22 +2,21 @@
   "name": "my-app",
   "version": "0.1.0",
   "private": true,
-   "scripts": {
+  "scripts": {
     "build": "next build",
-    "export": "next export",
-    "pages:prep": "mkdir -p out && cp out/index.html out/404.html && touch out/.nojekyll",
-    "pages:build": "npm run build && npm run export && npm run pages:prep"
+    "pages:prep": "rm -rf docs && mkdir -p docs && cp -r out/* docs/ && touch docs/.nojekyll",
+    "pages:build": "npm run build && npm run pages:prep"
   },
   "dependencies": {
+    "@dnd-kit/core": "^6.3.1",
+    "@dnd-kit/sortable": "^10.0.0",
+    "@dnd-kit/utilities": "^3.2.2",
     "@gsap/react": "^2.1.2",
     "gsap": "^3.13.0",
     "lucide-react": "^0.537.0",
     "next": "15.4.5",
     "react": "19.1.0",
     "react-dom": "19.1.0",
-    "@dnd-kit/core": "^6.3.1",
-    "@dnd-kit/sortable": "^10.0.0",
-    "@dnd-kit/utilities": "^3.2.2",
     "react-responsive": "^10.0.1"
   },
   "devDependencies": {
@@ -25,6 +24,7 @@
     "@tailwindcss/postcss": "^4",
     "eslint": "^9",
     "eslint-config-next": "15.4.5",
+    "shx": "^0.4.0",
     "tailwindcss": "^4"
   }
 }
