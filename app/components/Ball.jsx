@@ -111,7 +111,7 @@ export default function DarkPenguPage() {
       {/* FOREGROUND SIDE CHARACTERS (stacked like the reference) */}
       <div className="pointer-events-none absolute inset-x-0 bottom-0 z-10 select-none">
         {/* Left stacked pair */}
-        <div ref={(el) => setCharRef(el, 0)} className="absolute left-2 bottom-0 sm:left-6 md:left-10 relative w-[min(44vw,420px)] h-[min(28vh,260px)]">
+        <div ref={(el) => setCharRef(el, 0)} className="absolute left-2 bottom-0 sm:left-6 md:left-10 w-[min(44vw,420px)] h-[min(28vh,260px)]">
           <div className="absolute bottom-0 left-0 w-[64%]">
             <Image src="/art/DP3.png" alt="Ninja pengu" width={400} height={400} className="h-auto w-full object-contain" />
           </div>
@@ -120,7 +120,7 @@ export default function DarkPenguPage() {
           </div>
         </div>
         {/* Right dog */}
-        <div ref={(el) => setCharRef(el, 1)} className="absolute right-2 bottom-0 sm:right-6 md:right-10 relative w-[min(40vw,360px)] h-[min(26vh,260px)]">
+        <div ref={(el) => setCharRef(el, 1)} className="absolute right-2 bottom-0 sm:right-6 md:right-10 w-[min(40vw,360px)] h-[min(26vh,260px)]">
           <div className="absolute bottom-0 right-0 w-[70%]">
             <Image src="/art/DP2.png" alt="Companion dog" width={420} height={420} className="h-auto w-full object-contain" />
           </div>

@@ -5,7 +5,16 @@ import Image from "next/image"
 import MobileModal from "./MobileModal"
 import Link from "next/link";
 
+const bp = process.env.NEXT_PUBLIC_BASE_PATH || '';
+
 import penguIsland from "@/public/art/darkpengucc_sign.png"
+import bigOne from "@/public/art/BigOne.png"
+import flying from "@/public/art/flyingdp.png"
+import ball from "@/public/art/dpball_new.png"
+import rocksSM from "@/public/bgs/rocks_small.png"
+import rocksLG from "@/public/bgs/rocks.png"
+import logo from "@/public/logo.svg"
+import bgPoster from "@/public/art/poster.png"
 
 import { useRef, useState, useEffect } from "react"
 import gsap from "gsap"
@@ -193,17 +202,15 @@ export default function HeroSection() {
     <section ref={rootRef} className="relative h-screen overflow-hidden bg-black text-white font-luck">
       {/* Background video */}
       <video
-        className="absolute inset-0 w-full h-full object-cover"
-        src="/media/hyper.mp4"
-        poster="/art/poster.png"
         autoPlay
         loop
         muted
         playsInline
-        preload="metadata"
-        disableRemotePlayback
-      />
-
+        preload="auto"
+        className="absolute inset-0 h-full w-full object-cover"
+      >
+        <source src={`${bp}/media/hyper.mp4`} type="video/mp4" />
+      </video>
       <div className="absolute inset-0 bg-black/50" />
 
       {/* Navigation */}
@@ -214,7 +221,7 @@ export default function HeroSection() {
         <div className="flex-1 flex items-center">
           <Link href="/">
             <Image
-              src="/logo.svg"
+              src={logo}
               alt="Logo"
               width={40}
               height={40}
@@ -241,7 +248,7 @@ export default function HeroSection() {
           <span ref={line2Ref} className="block stroke-text text-white will-change-transform">DARK SIDE</span>
         </h1>
         <p ref={pRef} className="mt-6 text-lg md:text-xl 2xl:text-2xl font-bold tracking-wider will-change-transform">
-          The darkest penguin on Abstract KOKOT.
+          The darkest penguin on Abstract.
         </p>
 
         <div
@@ -265,7 +272,7 @@ export default function HeroSection() {
       {/* Decorative images */}
       <Image
         ref={bigRef}
-        src="/art/BigOne.png"
+        src={bigOne}
         alt="Big Pengu"
         className="hidden lg:block absolute left-0 bottom-[-5%] w-[clamp(25vw,30vw,45vw)] -translate-x-[5%] translate-y-[10%] will-change-transform"
         width={700}
@@ -275,7 +282,7 @@ export default function HeroSection() {
 
       <Image
         ref={flyRef}
-        src="/art/flyingdp.png"
+        src={flying}
         alt="Glowing Penguin"
         className="hidden md:block absolute bottom-[50%] right-[5%] 2xl:right-[8%] w-[clamp(100px,10vw,250px)] -translate-y-1/2 will-change-transform"
         width={300}
@@ -294,7 +301,7 @@ export default function HeroSection() {
           style={{ mixBlendMode: "screen" }}
         />
         <Image
-          src="/art/dpball_new.png"
+          src={ball}
           alt="Energy orb"
           width={300}
           height={300}
@@ -305,7 +312,7 @@ export default function HeroSection() {
 
       <div className="absolute inset-x-0 bottom-0 w-full h-[60vh] md:hidden">
         <Image
-          src="/bgs/rocks_small.png"
+          src={rocksSM}
           alt=""
           fill
           sizes="100vw"
@@ -317,7 +324,7 @@ export default function HeroSection() {
       {/* DESKTOP (≥ md) */}
       <div className="hidden md:block absolute inset-x-0 bottom-0 w-full h-[50vh]">
         <Image
-          src="/bgs/rocks.png"
+          src={rocksLG}
           alt=""
           fill
           sizes="100vw"

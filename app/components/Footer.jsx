@@ -2,6 +2,14 @@
 import Image from "next/image"
 import Link from "next/link"
 
+import GlowingPengu from "@/public/art/glowing-pengu.jpg"
+import xIcon from "@/public/art/footer-icons/x-icon.svg"
+import tIcon from "@/public/art/footer-icons/telegram-icon.svg"
+import dIcon from "@/public/art/footer-icons/dex-icon.svg"
+import DIcon from "@/public/art/footer-icons/discord-icon.svg"
+import logo from "@/public/logo.svg"
+
+
 // SocialsFooter component renders a footer section with social links, mascot, and quick links
 export default function SocialsFooter() {
   return (
@@ -23,7 +31,7 @@ export default function SocialsFooter() {
             {/* Mascot image: visible on md+ screens, scales on hover */}
             <div className="hidden md:flex cursor-grab transform transition duration-200 ease-in-out hover:scale-105">
                 <Image
-                    src="/art/glowing-pengu.jpg"
+                    src={GlowingPengu}
                     alt="Mascot"
                     width={250}
                     height={250}
@@ -56,16 +64,16 @@ export default function SocialsFooter() {
           <div className="flex justify-center gap-4">
             {/* Each link wraps an icon image; using fill to fit container */}
             <a className="footer-link" href="https://dexscreener.com/abstract/0xa91de33390dcc7c2a2fd586dc3bc7155953e9d1e">
-              <Image src="/art/footer-icons/dex-icon.svg"       alt="Dex"      fill className="object-contain" />
+              <Image src={dIcon}      alt="Dex"      fill className="object-contain" />
             </a>
             <a className="footer-link" href="https://x.com/darkpenguonabs">
-              <Image src="/art/footer-icons/x-icon.svg"         alt="X"        fill className="object-contain" />
+              <Image src={xIcon}         alt="X"        fill className="object-contain" />
             </a>
             <a className="footer-link" href="https://discord.com/">
-              <Image src="/art/footer-icons/discord-icon.svg"   alt="Discord"  fill className="object-contain" />
+              <Image src={DIcon}   alt="Discord"  fill className="object-contain" />
             </a>
             <a className="footer-link" href="https://t.me/darkpenguportal">
-              <Image src="/art/footer-icons/telegram-icon.svg" alt="Telegram" fill className="object-contain" />
+              <Image src={tIcon} alt="Telegram" fill className="object-contain" />
             </a>
           </div>
         </div>
@@ -77,7 +85,7 @@ export default function SocialsFooter() {
         All rights reserved © 2025
         <div className="mt-2 flex justify-center">
           <Image
-            src="/art/footer-logo.svg"
+            src={logo}
             alt="Logo"
             width={30}
             height={30}

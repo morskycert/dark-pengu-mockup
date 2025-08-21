@@ -12,6 +12,16 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { SplitText } from 'gsap/SplitText'
 import { useGSAP } from '@gsap/react'
 
+// images imports
+import G1 from "@/public/art/gallery/1.jpg"
+import G2 from "@/public/art/gallery/2.jpg"
+import G3 from "@/public/art/gallery/3.jpg"
+import G4 from "@/public/art/gallery/4.jpg"
+import G5 from "@/public/art/gallery/5.jpg"
+import G6 from "@/public/art/gallery/6.jpg"
+import G7 from "@/public/art/gallery/7.jpg"
+import G8 from "@/public/art/gallery/8.jpg"
+
 // Register GSAP plugins for scroll-triggered and text-splitting animations
 gsap.registerPlugin(ScrollTrigger, SplitText, useGSAP)
 
@@ -37,14 +47,14 @@ const SortableItem = dynamic(() => import('./SortableItem'), {
 
 // Array of image data used to populate the gallery
 const allImages = [
-  { id: '1', src: '/art/gallery/1.jpg', width: 1200, height: 600 },
-  { id: '2', src: '/art/gallery/2.jpg', width: 600, height: 400 },
-  { id: '3', src: '/art/gallery/3.jpg', width: 600, height: 400 },
-  { id: '4', src: '/art/gallery/4.jpg', width: 400, height: 300 },
-  { id: '5', src: '/art/gallery/5.jpg', width: 400, height: 300 },
-  { id: '6', src: '/art/gallery/6.jpg', width: 400, height: 300 },
-  { id: '7', src: '/art/gallery/7.jpg', width: 600, height: 400 },
-  { id: '8', src: '/art/gallery/8.jpg', width: 600, height: 400 },
+  { id: '1', src: {G1}, width: 1200, height: 600 },
+  { id: '2', src: {G2}, width: 600, height: 400 },
+  { id: '3', src: {G3}, width: 600, height: 400 },
+  { id: '4', src: {G4}, width: 400, height: 300 },
+  { id: '5', src: {G5}, width: 400, height: 300 },
+  { id: '6', src: {G6}, width: 400, height: 300 },
+  { id: '7', src: {G7}, width: 600, height: 400 },
+  { id: '8', src: {G8}, width: 600, height: 400 },
 ]
 
 // Destructure first image and the rest for separate styling/layout

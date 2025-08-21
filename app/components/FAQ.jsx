@@ -8,6 +8,9 @@ import Image from 'next/image'
 // FAQ data imported from a constants file
 import { faqQuestions } from './constants'
 
+// images imports
+import Chevron from "@/public/art/chevron.svg"
+
 // FAQ component displaying a list of questions that can be toggled open/closed
 export default function FAQ() {
   // Initialize an array of booleans for each FAQ question (all closed by default)
@@ -94,7 +97,7 @@ export default function FAQ() {
                   ${isOpen ? 'rotate-180' : ''}
                 `}>
                   <Image
-                    src="/art/chevron.svg"
+                    src={Chevron}
                     alt="toggle chevron"
                     width={20}
                     height={20}

@@ -1,5 +1,7 @@
 "use client";
 
+const bp = process.env.NEXT_PUBLIC_BASE_PATH || '';
+
 import React, { useEffect, useRef, useState } from "react";
 
 /**
@@ -133,15 +135,16 @@ export default function Preloader({ heroId = "hero", timeoutMs = 8000, minDurati
     
     {/* Character video above progress bar */}
     <div className="mb-4 flex justify-center">
-      <video
-        className="w-[400px] h-auto rounded-lg"
-        src="/art/rising-dp.mp4" // replace with your character video path
-        autoPlay
-        loop
-        muted
-        playsInline
-        preload="metadata"
-      />
+       <video
+      autoPlay
+      loop
+      muted
+      playsInline
+      preload="auto"
+      className="h-48 w-48 rounded-xl"   // whatever classes you use
+    >
+      <source src={`${bp}/art/rising-dp.mp4`} type="video/mp4" />
+    </video>
     </div>
 
     {/* Brand / Logo */}

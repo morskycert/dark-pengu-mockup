@@ -6,6 +6,11 @@ import Image from 'next/image';
 import CopyCAButton from './CAButton';
 import gsap from 'gsap';
 
+import logo from "@/public/logo.svg"
+import xIcon from "@/public/art/x-icon.svg"
+import tIcon from "@/public/art/telegram-icon.svg"
+import dIcon from "@/public/art/dex-icon.svg"
+
 // no plugins needed right now
 gsap.registerPlugin();
 
@@ -109,7 +114,7 @@ export default function MobileModal() {
           {/* Top Row: Logo + Close */}
           <div className="flex items-center justify-center p-4">
             <div className="w-12 h-12 rounded-full bg-[#3a3a3a] flex items-center justify-center shadow-lg">
-              <Image src="/logo.svg" alt="Logo" width={42} height={42} className="rounded-full"/>
+              <Image src={logo} alt="Logo" width={42} height={42} className="rounded-full"/>
             </div>
 
             <button
@@ -143,13 +148,13 @@ export default function MobileModal() {
           {/* Bottom: Social Icons */}
           <div className="flex items-center justify-center space-x-6 mb-8">
             <a href="https://twitter.com/yourprofile" target="_blank" rel="noopener noreferrer" className="w-12 h-12 rounded-full bg-[#3a3a3a] flex items-center justify-center shadow-lg">
-              <Image src="/art/x-icon.svg" className="rounded-full" alt="Twitter / X" width={44} height={44} />
+              <Image src={xIcon} className="rounded-full" alt="Twitter / X" width={44} height={44} />
             </a>
             <a href="https://t.me/yourchannel" target="_blank" rel="noopener noreferrer" className="w-12 h-12 rounded-full bg-[#3a3a3a] flex items-center justify-center shadow-lg">
-              <Image src="/art/telegram-icon.svg" className="rounded-full" alt="Telegram" width={44} height={44} />
+              <Image src={tIcon} className="rounded-full" alt="Telegram" width={44} height={44} />
             </a>
             <a href="https://dexscreener.com/yourpair" target="_blank" rel="noopener noreferrer" className="w-12 h-12 rounded-full bg-[#3a3a3a] flex items-center justify-center shadow-lg">
-              <Image src="/art/dex-icon.svg" className="rounded-full" alt="DexScreener" width={44} height={44} />
+              <Image src={dIcon} className="rounded-full" alt="DexScreener" width={44} height={44} />
             </a>
           </div>
         </div>

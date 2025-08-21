@@ -5,6 +5,13 @@ import { useRef, useEffect } from 'react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger'
 
+import swirl from "@/public/art/swirl.jpeg"
+import Dpengu from "@/public/art/DPENGU.png"
+import DP3 from "@/public/art/DP3.png"
+import DP1 from "@/public/art/D1.png"
+import DP2 from "@/public/art/DP2.png"
+
+
 gsap.registerPlugin(ScrollTrigger)
 
 export default function DarkPenguPage() {
@@ -105,7 +112,7 @@ export default function DarkPenguPage() {
     <section id="about" className="relative border-t-2 border-t-[#171717] min-h-screen w-full overflow-hidden bg-[#050607] text-white font-fredok">
       {/* ===== BACKGROUND ===== */}
       <div aria-hidden className="pointer-events-none absolute inset-0">
-        <Image src="/art/swirl.jpeg" alt="" fill priority className="object-cover" />
+        <Image src={swirl} alt="" fill priority className="object-cover" />
 
         {/* Darker overlay + vignette (fades in) */}
         <div
@@ -179,7 +186,7 @@ export default function DarkPenguPage() {
             className="mx-auto aspect-[5/4] w-full max-w-[540px] sm:max-w-[580px] lg:max-w-[720px] 2xl:max-w-[860px] translate-y-6 md:translate-y-10"
           >
             <Image
-              src="/art/DPENGU.png"
+              src={Dpengu}
               alt="Dark Pengu"
               width={1400}
               height={1400}
@@ -198,7 +205,7 @@ export default function DarkPenguPage() {
         >
           <div className="absolute bottom-0 left-0 w-[82%]">
             <Image
-              src="/art/DP3.png"
+              src={DP3}
               alt="Ninja Pengu"
               width={520}
               height={520}
@@ -206,7 +213,7 @@ export default function DarkPenguPage() {
             />
           </div>
           <div className="absolute bottom-0 left-[65%] w-[68%] 2xl:w-[clamp(250px,20vw,450px)]">
-            <Image src="/art/D1.png" alt="Glasses Pengu" width={440} height={440} className="h-auto w-full object-contain" />
+            <Image src={DP1} alt="Glasses Pengu" width={440} height={440} className="h-auto w-full object-contain" />
           </div>
         </div>
 
@@ -216,7 +223,7 @@ export default function DarkPenguPage() {
           className="absolute right-1 bottom-0 sm:right-0 md:right-2 xl:right-10 h-[min(26vh,280px)] w-[min(48vw,400px)] 2xl:w-[clamp(450px,24vw,720px)]"
         >
           <div className="absolute bottom-0 right-0 w-[76%]">
-            <Image src="/art/DP2.png" alt="Companion dog" width={560} height={560} className="h-auto w-full object-contain" />
+            <Image src={DP2} alt="Companion dog" width={560} height={560} className="h-auto w-full object-contain" />
           </div>
         </div>
       </div>
