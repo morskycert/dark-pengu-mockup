@@ -5,6 +5,8 @@ import Image from "next/image"
 import MobileModal from "./MobileModal"
 import Link from "next/link";
 
+import penguIsland from "@/public/art/darkpengucc_sign.png"
+
 import { useRef, useState, useEffect } from "react"
 import gsap from "gsap"
 import { useGSAP } from "@gsap/react"
@@ -219,7 +221,7 @@ export default function HeroSection() {
               className="rounded-full"
               priority
             />
-         </Link>
+          </Link>
         </div>
 
         <div>
@@ -248,7 +250,7 @@ export default function HeroSection() {
         >
           <a href="https://portal.abs.xyz/trade?buy=0x817c16910e27880f55ff2c57f206e458549d96e3">
             <Image
-              src="/art/darkpengucc_sign.png"
+              src={penguIsland}
               alt="Penguin on Floating Island"
               width={400}
               height={400}

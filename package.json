@@ -3,10 +3,11 @@
   "version": "0.1.0",
   "private": true,
     "scripts": {
-    "build": "next build",
-    "export": "next export -o docs",
-    "predeploy": "npm run build",
-    "deploy": "npm run export && git add -A docs && git commit -m \"Export for Pages\" || echo \"No changes\" && git push"
+    "dev": "next dev",                 
+    "build": "next build",             
+    "preview": "next start -p 3000",   
+    "copy:docs": "node -e \"const fs=require('fs');fs.rmSync('docs',{recursive:true,force:true});fs.mkdirSync('docs',{recursive:true});fs.cpSync('out','docs',{recursive:true});fs.writeFileSync('docs/.nojekyll','');\"",
+    "deploy": "npm run build && npm run copy:docs && git add -A docs && git commit -m \"Deploy to Pages\" && git push"
   },
   "dependencies": {
     "@dnd-kit/core": "^6.3.1",
