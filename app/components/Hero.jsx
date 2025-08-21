@@ -241,7 +241,7 @@ export default function HeroSection() {
           <span ref={line2Ref} className="block stroke-text text-white will-change-transform">DARK SIDE</span>
         </h1>
         <p ref={pRef} className="mt-6 text-lg md:text-xl 2xl:text-2xl font-bold tracking-wider will-change-transform">
-          The darkest penguin on Abstract.
+          The darkest penguin on Abstract KOKOT.
         </p>
 
         <div
