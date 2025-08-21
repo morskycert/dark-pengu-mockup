@@ -13,6 +13,7 @@ export default function Home() {
     <>
       <HeroSection/>
       <About/>
+      <Marquess speed={100} />
       <HowToBuy/>
       <Marquess speed={100} reverse={true}/>
       <FAQ/>

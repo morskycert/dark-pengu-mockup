@@ -77,7 +77,7 @@ export default function Gallery() {
         opacity: 0,
         y: 60,
         ease: 'back.out(1.7)',
-        duration: 0.8,
+        duration: 0.6,
         stagger: 0.04,
       })
         // Animate main image fade-in and slight scale
@@ -86,15 +86,15 @@ export default function Gallery() {
           scale: 0.95,
           y: 30,
           ease: 'power2.out',
-          duration: 0.8,
-        }, '-=0.2') // start this animation 0.4s before the previous ends
+          duration: 0.4,
+        }, '-=0.4') // start this animation 0.4s before the previous ends
         // Animate the grid container fade-in
         .from('#gallery-div', {
           opacity: 0,
           y: 40,
           ease: 'power2.out',
-          duration: 0.8,
-        }, '-=0.2')
+          duration: 0.4,
+        }, '-=0.4')
 
       // ScrollTrigger callbacks to control playback and reversal
       ScrollTrigger.create({
@@ -131,7 +131,7 @@ export default function Gallery() {
     <section
       id="gallery"
       ref={sectionRef}
-      className="bg-[#0F0F0F] flex flex-col justify-center items-center select-none pt-20 pb-24 px-12"
+      className="bg-[#000000] flex flex-col justify-center items-center select-none pt-20 pb-24 px-12"
     >
       {/* Gallery title */}
       <h1

@@ -1,4 +1,4 @@
-
+import Preloader from "./components/Preloader";
 import "./styles/globals.css";
 import { Luckiest_Guy, Fredoka } from 'next/font/google';
 
@@ -23,6 +23,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className="`${luckiestGuy.variable} ${fredoka.variable}">
+        <Preloader heroId="hero" timeoutMs={8000} />
         {children}
       </body>
     </html>

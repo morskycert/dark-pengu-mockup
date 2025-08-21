@@ -39,8 +39,8 @@ export default function HowToBuy() {
       rows.forEach((row, index) => {
         ScrollTrigger.create({
           trigger: row,
-          start: 'top center+=5%',
-          end: 'bottom center-=5%',
+          start: 'top center+=2%',
+          end: 'bottom center-=2%',
           // Whichever trigger is active takes control and dims the rest
           onToggle: (self) => {
             if (self.isActive) setActive(row)
@@ -66,7 +66,7 @@ export default function HowToBuy() {
   }, [])
 
   return (
-    <section id='how-to-buy' ref={sectionRef} className="bg-black select-none text-white py-24 lg:pb-[15vh] px-8">
+    <section id='how-to-buy' ref={sectionRef} className="bg-[black] select-none text-white py-24 lg:pb-[15vh] px-8">
       <h2
         id="how-to-buy-title"
         className="font-luck text-center text-5xl lg:text-[7vh] mb-16"

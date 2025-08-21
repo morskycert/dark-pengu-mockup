@@ -30,16 +30,17 @@ export const steps = [
     links: [
       { href: "https://abs.xyz", text: "abs.xyz" },
       { href: "https://metamask.io", text: "Metamask" },
+      { href: "https://rabby.io/", text: "Rabby" },
     ],
     extra: ". Make sure you wallet is secure before moving to next step.",
-    image: "/art/how-to-buy/card-1.jpg",
+    image: "/art/how-to-buy/card1.png",
     reverse: false,
   },
   {
     title: "Step Two",
     description:
       "Add ETH to your wallet. If your ETH is currently on another network such as Ethereum Mainnet, first ensure it’s stored in the wallet you set up in Step One. You’ll move it over to Abstract in the next step.",
-    image: "/art/how-to-buy/card-2.webp",
+    image: "/art/how-to-buy/card2.png",
     reverse: true,
   },
   {
@@ -48,7 +49,7 @@ export const steps = [
       "Bridge your ETH from Ethereum Mainnet to the Abstract chain. The official Abstract bridge, available through the",
     links: [{ href: "https://abs.xyz", text: "abs.xyz" }],
     extra: " portal.",
-    image: "/art/how-to-buy/card-3.webp",
+    image: "/art/how-to-buy/card3.png",
     reverse: false,
   },
   {
@@ -58,7 +59,7 @@ export const steps = [
     links: [{ href: "#", text: "$DPENFU" }],
     extra:
       " through an Abstract-supported DEX, or by swapping directly within the Abstract Global Wallet if supported.",
-    image: "/art/how-to-buy/card-4.webp",
+    image: "/art/how-to-buy/card4.png",
     reverse: true,
   },
 ]

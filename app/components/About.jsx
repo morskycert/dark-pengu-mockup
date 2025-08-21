@@ -102,22 +102,22 @@ export default function DarkPenguPage() {
   const setCharRef = (el, i) => (chars.current[i] = el || chars.current[i])
 
   return (
-    <section id="about" className="relative min-h-screen w-full overflow-hidden bg-[#050607] text-white font-fredok">
+    <section id="about" className="relative border-t-2 border-t-[#171717] min-h-screen w-full overflow-hidden bg-[#050607] text-white font-fredok">
       {/* ===== BACKGROUND ===== */}
       <div aria-hidden className="pointer-events-none absolute inset-0">
         <Image src="/art/swirl.jpeg" alt="" fill priority className="object-cover" />
 
         {/* Darker overlay + vignette (fades in) */}
         <div
-          ref={bgFadeRef}
-          className="absolute inset-0 opacity-0"
+      
+          className="absolute inset-0 "
           style={{
             background:
               // heavy dark vignette similar to your screenshot
-              'radial-gradient(120% 90% at 50% 8%, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0.78) 55%, rgba(0,0,0,0.9) 100%)',
+              'radial-gradient(120% 90% at 50% 8%, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0.82) 55%, rgba(0,0,0,0.93) 100%)',
           }}
         />
-        <div className="absolute inset-0 bg-black/50" />
+        <div className="absolute inset-0 bg-black/75" />
       </div>
 
       {/* ===== CONTENT ===== */}
@@ -131,7 +131,7 @@ export default function DarkPenguPage() {
             lg:text-7xl  2xl:text-[10vh]">
             <span className="[text-shadow:2px_2px_0_#000,4px_4px_0_#000]">The Story of</span>
             <br />
-            <span className="inline-block bg-gradient-to-b from-white to-white/80 bg-clip-text text-transparent [text-shadow:0_4px_0_#000,2px_3px_0_#000,0_9px_1px_#282FB6]">
+            <span className="inline-block bg-gradient-to-b from-white to-white/80 bg-clip-text text-transparent [text-shadow:0_4px_0_#181818,2px_3px_0_#181818,0_9px_1px_#282FB6]">
               Dark Pengu
             </span>
           </h1>
@@ -179,7 +179,7 @@ export default function DarkPenguPage() {
             className="mx-auto aspect-[5/4] w-full max-w-[540px] sm:max-w-[580px] lg:max-w-[720px] 2xl:max-w-[860px] translate-y-6 md:translate-y-10"
           >
             <Image
-              src="/art/DPENGU.svg"
+              src="/art/DPENGU.png"
               alt="Dark Pengu"
               width={1400}
               height={1400}

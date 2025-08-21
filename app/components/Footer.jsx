@@ -6,7 +6,7 @@ import Link from "next/link"
 export default function SocialsFooter() {
   return (
     // Footer container with background color, padding, and typography settings
-    <footer id="socials" className="bg-[#1b1441] select-none text-white font-Fredoka py-12 px-6 md:px-14 ">
+    <footer id="socials" className="bg-[#1A1A41] select-none text-white font-Fredoka py-12 px-6 md:px-14 ">
       {/* Main heading for the socials section */}
       <h1 className="font-luck text-center text-5xl lg:text-6xl text-white mb-12 mt-12">Socials</h1>
 

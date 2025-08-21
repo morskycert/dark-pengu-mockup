@@ -40,7 +40,7 @@ export default function FAQ() {
       "
     >
       {/* Overlay to darken background image */}
-      <div className="absolute inset-0 bg-black/75 pointer-events-none" />
+      <div className="absolute inset-0 bg-black/85 pointer-events-none" />
 
       {/* Container for FAQ content, stacked with spacing */}
       <div className="relative z-10 w-full max-w-2xl md:max-w-3xl lg:max-w-4xl xl:max-w-[100vh] space-y-6">
@@ -62,10 +62,10 @@ export default function FAQ() {
               key={i}
               className="
                 w-full
-                bg-gradient-to-b from-[#282FB6] to-[#1b1441]
+                bg-[linear-gradient(180deg,rgba(96,165,250,0.55)_0%,rgba(40,47,182,0.35)_100%)]
                 border-2                
-                border-[#0ff7]                                         
-                shadow-[0_0_12px_rgba(0,256,256,0.7)]  
+                border-blue-400/30                                         
+                 shadow-[0_0_0_1px_rgba(147,197,253,0.18),0_18px_60px_rgba(37,99,235,0.25)] 
                 rounded-xl  overflow-hidden
               "
             >

@@ -126,11 +126,12 @@ export default function MobileModal() {
 
           {/* Menu Items */}
           <nav className=" flex-grow px-6 space-y-4 mt-2">
-            {['Our Story','Music','Memes','How to Buy','FAQ','Socials'].map(item => (
+            {['About','How to Buy','FAQ','Gallery','Socials'].map(item => (
               <a
                 key={item}
                 href={`#${item.toLowerCase().replace(/ /g, '-')}`}
                 className="block w-full text-center py-3 rounded-lg bg-[#3a3a3a] font-bold text-lg shadow-inner tracking-widest"
+                onClick={toggleModal}
               >
                 {item.toUpperCase()}
               </a>
