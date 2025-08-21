@@ -157,7 +157,7 @@ export default function DarkPenguPage() {
           <article className="relative rounded-[28px] border border-blue-400/30 bg-white/5 p-5 md:p-7 lg:p-8 backdrop-blur-xl 
           shadow-[0_0_0_1px_rgba(147,197,253,0.18),0_18px_60px_rgba(37,99,235,0.25)] text-[clamp(1.1rem,1.4vw,1.4rem)] xl:text-[clamp(1.2rem,1.3vw,1.8rem)] leading-relaxed">
             <p>
-              In the quiet corners of Abstract Chain’s liquidity pools, there lies an unspoken presence—Dark Pengu. A silhouette
+              In the quiet corners of Abstract Chain’s liquidity pools, there lies an unspoken presence — Dark Pengu. A silhouette
               born from the shadows of the popular Pengu, older than light, darker than memory, he embodies his dark side.
             </p>
             <p className="mt-4">

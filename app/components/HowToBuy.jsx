@@ -87,7 +87,7 @@ export default function HowToBuy() {
               alt={step.title}
               width={200}
               height={200}
-              src={step.image}
+              src={`${bp}${step.image}`} 
               className="w-full max-w-sm md:rounded-lg lg:max-w-md object-fill shadow-lg"
             />
             <div className="p-0 max-w-xl lg:max-w-[30vw]">

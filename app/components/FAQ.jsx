@@ -8,6 +8,7 @@ import Image from 'next/image'
 // FAQ data imported from a constants file
 import { faqQuestions } from './constants'
 
+const bp = process.env.NEXT_PUBLIC_BASE_PATH || ''
 // images imports
 import Chevron from "@/public/art/chevron.svg"
 
@@ -31,16 +32,17 @@ export default function FAQ() {
   return (
     // Main FAQ section with background image and layout styling
     <section
-      id='faq'
+      id="faq"
       className="
         relative flex flex-col items-center justify-center
         select-none
-        min-h-[90vh]              
-        px-8 sm:px-10 lg:px-8        
-        py-12 sm:py-16               
-        bg-[url('/art/bg-dark-pengu.jpg')] bg-cover bg-center
+        min-h-[90vh]
+        px-8 sm:px-10 lg:px-8
+        py-12 sm:py-16
+        bg-cover bg-center
         overflow-y-auto
       "
+      style={{ backgroundImage: `url(${bp}/art/bg-dark-pengu.jpg)` }}
     >
       {/* Overlay to darken background image */}
       <div className="absolute inset-0 bg-black/85 pointer-events-none" />
