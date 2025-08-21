@@ -2,11 +2,11 @@
   "name": "my-app",
   "version": "0.1.0",
   "private": true,
-  "scripts": {
-    "dev": "next dev --turbopack",
+   "scripts": {
     "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
+    "export": "next export",
+    "pages:prep": "mkdir -p out && cp out/index.html out/404.html && touch out/.nojekyll",
+    "pages:build": "npm run build && npm run export && npm run pages:prep"
   },
   "dependencies": {
     "@gsap/react": "^2.1.2",
