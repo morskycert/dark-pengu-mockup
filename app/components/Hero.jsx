@@ -3,6 +3,7 @@ import Navbar from "./Navbar"
 import CopyCAButton from "./CAButton"
 import Image from "next/image"
 import MobileModal from "./MobileModal"
+import Link from "next/link";
 
 import { useRef, useState, useEffect } from "react"
 import gsap from "gsap"
@@ -209,7 +210,7 @@ export default function HeroSection() {
         ${scrolled ? "bg-black/50 backdrop-blur-sm" : "bg-transparent"}`}
       >
         <div className="flex-1 flex items-center">
-          <a href="/">
+          <Link href="/">
             <Image
               src="/logo.svg"
               alt="Logo"
@@ -218,7 +219,7 @@ export default function HeroSection() {
               className="rounded-full"
               priority
             />
-          </a>
+         </Link>
         </div>
 
         <div>
