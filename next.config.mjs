@@ -1,11 +1,7 @@
 const isProd = process.env.NODE_ENV === 'production';
-
-/** @type {import('next').NextConfig} */
-const nextConfig = {
-  output: 'export',                 // produces static HTML into /out
+export default {
+  output: 'export',
   images: { unoptimized: true },
   basePath: isProd ? '/dark-pengu-mockup' : '',
   trailingSlash: true,
 };
-
-export default nextConfig;
